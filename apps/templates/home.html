@@ -1,9 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock custom_css %}
 
 {% block title %}
   Medicine Dose Tracker
 {% endblock %}
 
 {% block content %}
-  <h1>Welcome here!</h1>
+  <div class="row">
+    <div class="col">
+        <div id="home-content">
+            <h1>Medicine Dose Tracker - Get Started!</h1>
+            <hr>
+            <a class="btn btn-light btn-lg" href="javascript:void(0)" role="button">Get Started !</a>
+        </div>
+    </div>
+  </div>
 {% endblock %}
