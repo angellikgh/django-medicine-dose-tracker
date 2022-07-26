@@ -8,7 +8,7 @@ set -e
 # ./run_tests.sh tests.myapp.test_urls.UrlsTestCase.test_home_url
 TESTS_TO_RUN=${1:tests}
 
-docker exec myproject_web /bin/sh -c "pipenv run ./manage.py test --settings=src.config.settings.tests $TESTS_TO_RUN"
+docker exec myproject_web /bin/sh -c "pipenv run ./manage.py test --settings=apps.config.settings.tests $TESTS_TO_RUN"
 
 # You could add further commands on to the end of that command, eg:
-# docker exec myproject_web /bin/sh -c "pipenv run ./manage.py test --settings=myproject.settings.tests $TESTS_TO_RUN ; pipenv run flake8"
+# docker exec myproject_web /bin/sh -c "pipenv run ./manage.py test --settings=apps.settings.tests $TESTS_TO_RUN ; pipenv run flake8"
